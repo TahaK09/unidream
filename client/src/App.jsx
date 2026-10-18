@@ -1,17 +1,13 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./home/index.jsx";
 
-
-let router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
-    Component: <Home />,
+    element: <Home />,
   },
 ]);
 
-ReactDOM.createRoot(root).render(
-  <RouterProvider router={router} />,
-);
+export default function App() {
+  return <RouterProvider router={router} />;
+}

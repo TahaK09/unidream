@@ -1,4 +1,15 @@
-# React + Vite
+# theunidream client
+
+Run these commands from the `client` directory:
+
+```sh
+npm install
+npm run dev
+```
+
+The development server prints the local URL to open. To verify a production build, run `npm run build`.
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
