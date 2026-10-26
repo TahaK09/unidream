@@ -17,6 +17,28 @@ export default function Home() {
 				</svg>
 			),
 		},
+		{
+			title: 'Build Your Profile',
+			description: 'We help you in finding right opportunities, such as internships, and build your profile!',
+			label: 'Explore Opportunities',
+			icon: (
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-7 w-7">
+					<path d="M3 9.5 12 5l9 4.5-9 4.5-9-4.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+					<path d="M6.5 11.5v5.2c3.3 2.5 7.7 2.5 11 0v-5.2M21 9.5v6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+				</svg>
+			),
+		},
+		{
+			title: 'Test Preparation',
+			description: 'We help you with entrance test preparation such as SAT, ACT, CEnT-S, etc.',
+			label: 'Explore Tests',
+			icon: (
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-7 w-7">
+					<path d="M3 9.5 12 5l9 4.5-9 4.5-9-4.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+					<path d="M6.5 11.5v5.2c3.3 2.5 7.7 2.5 11 0v-5.2M21 9.5v6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+				</svg>
+			),
+		},
 	];
 
 	return (
@@ -62,29 +84,28 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section id="explore" className="bg-[#ffffff] px-6 py-20 lg:px-10">
+			<section id="explore" className="bg-gradient-to-b from-white to-[#f7faef] px-6 py-20 lg:px-10">
 				<div className="mx-auto max-w-7xl">
 					<div className="max-w-2xl">
-						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#a5d765]">Explore</p>
-						<h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Find your <span className="text-[#a5d765]">roadmap to college</span></h2>
-						<p className="mt-4 text-slate-600">Start with a direction and find the opportunities that fit your dreams.</p>
+						<p className="text-xs font-bold uppercase tracking-[0.2em] text-[#78a83f]">Explore your options</p>
+						<h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Find your <span className="text-[#78a83f]">roadmap to college</span></h2>
+						<p className="mt-4 max-w-xl leading-7 text-slate-600">Start with a direction and find the opportunities that fit your dreams.</p>
 					</div>
-					<div className="mt-10 max-w-md">
+					<div className="mt-10 grid gap-5 md:grid-cols-3">
 						{categories.map((category) => (
-							<a
+							<div
 								key={category.title}
-								href="#explore"
-								className="group block rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#a5d765] hover:shadow-xl hover:shadow-slate-200/60"
+								className="group flex min-h-72 flex-col rounded-3xl border border-slate-200/80 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#a5d765] hover:shadow-xl hover:shadow-slate-200/70 sm:p-8"
 							>
-								<span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-[#a5d765] transition group-hover:bg-[#AFF569] group-hover:text-white">
+								<span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f2f8e9] text-[#78a83f] transition-colors group-hover:bg-[#a5d765] group-hover:text-white">
 									{category.icon}
 								</span>
-								<h3 className="mt-6 text-xl font-bold">{category.title}</h3>
-								<p className="mt-2 leading-7 text-slate-600">{category.description}</p>
-								<span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#a5d765]">
-									{category.label}<span aria-hidden="true">→</span>
+								<h3 className="mt-6 text-xl font-bold tracking-tight text-slate-900">{category.title}</h3>
+								<p className="mt-2 flex-1 leading-7 text-slate-600">{category.description}</p>
+								<span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#6f9e38]">
+									{category.label}<span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
 								</span>
-							</a>
+							</div>
 						))}
 					</div>
 				</div>
