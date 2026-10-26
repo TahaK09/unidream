@@ -1,5 +1,10 @@
 export default function Home() {
 
+	const featured = [
+		{ name: "Forbes", image: "https://cdn.filestackcontent.com/EFx0tf2FSkSM8zW09UhJ", },
+		{ name: "OutLook Business", image: "https://cdn.filestackcontent.com/bAQ916nBTeu7eFqJMj7H", },
+		{ name: "Women Entrepreneur India", image: "https://cdn.filestackcontent.com/8zDoUe7Qxyij5OfQhzxZ", },
+	]
 	const categories = [
 		{
 			title: 'Find your university',
@@ -16,51 +21,21 @@ export default function Home() {
 
 	return (
 		<main className="min-h-screen bg-white text-slate-900">
-			<header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
-				<div className="flex flex-col items-center gap-0.5">
-					<a href="#home" className="text-3xl font-bold tracking-tight text-slate-900">
-						the<span className="font-semibold text-[#a5d765]">uni</span>dream
-					</a>
-					<p className="text-sm text-slate-500">
-						Affiliated with UniRely.com
-					</p>
-				</div>
-
-				<div className="flex items-center gap-4">
-
-					<a
-						href="#explore"
-						className="rounded-full border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-[#a5d765] hover:text-[#a5d765]"
-					>
-						Testimonials
-					</a>	
-					<a
-						href="#explore"
-						className="rounded-full border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-[#a5d765] hover:text-[#a5d765]"
-					>
-						Explore
-					</a>
-				</div>
-
-
-			</header>
 
 			<section id="home" className="relative overflow-hidden">
 				<div className="absolute -right-32 -top-36 h-96 w-96 rounded-full bg-indigo-100/70 blur-3xl" />
 				<div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28 lg:px-10">
 					<div>
-						<span className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm font-medium font-semibold text-[#a5d765]">
-							<span className="h-2 w-2 rounded-full bg-[#a5d765]" /> Your future starts here
-						</span>
+
 						<h1 className="mt-7 max-w-xl text-5xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
 							Dream big. <span className="font-semibold text-[#a5d765]">Find your way.</span>
 						</h1>
-						<p className="mt-6 max-w-lg text-lg leading-8 text-slate-600">
-							Your next chapter is out there. Discover opportunities, explore your options, and take the first step toward a future you love.
+						<p className="mt-6 max-w-lg text-[18px] leading-8  text-slate-600">
+							Craft successful college applications with hands-on guidance from counselors and mentors at top universities across the globe.
 						</p>
 						<a
 							href="#explore"
-							className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#a5d765] px-6 py-3.5 font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-700"
+							className="mt-9 inline-flex items-center gap-2 font-semibold uppercase text-red-400"
 						>
 							Start exploring
 							<span aria-hidden="true">→</span>
@@ -90,8 +65,8 @@ export default function Home() {
 			<section id="explore" className="bg-[#ffffff] px-6 py-20 lg:px-10">
 				<div className="mx-auto max-w-7xl">
 					<div className="max-w-2xl">
-						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#a5d765] text-semibold">Explore</p>
-						<h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Where will your curiosity take you?</h2>
+						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#a5d765]">Explore</p>
+						<h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Find your <span className="text-[#a5d765]">roadmap to college</span></h2>
 						<p className="mt-4 text-slate-600">Start with a direction and find the opportunities that fit your dreams.</p>
 					</div>
 					<div className="mt-10 max-w-md">
@@ -99,9 +74,9 @@ export default function Home() {
 							<a
 								key={category.title}
 								href="#explore"
-								className="group block rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl hover:shadow-slate-200/60"
+								className="group block rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#a5d765] hover:shadow-xl hover:shadow-slate-200/60"
 							>
-								<span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-[#a5d765] transition group-hover:bg-indigo-600 group-hover:text-white">
+								<span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-[#a5d765] transition group-hover:bg-[#AFF569] group-hover:text-white">
 									{category.icon}
 								</span>
 								<h3 className="mt-6 text-xl font-bold">{category.title}</h3>
@@ -110,6 +85,35 @@ export default function Home() {
 									{category.label}<span aria-hidden="true">→</span>
 								</span>
 							</a>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section id="feature" className="bg-slate-50 px-6 py-20 lg:px-10">
+				<div className="mx-auto max-w-7xl">
+					<div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+						<div className="max-w-2xl">
+							<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#83b746]">In the spotlight</p>
+							<h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Featured <span className="text-[#a5d765]">In</span></h2>
+							<p className="mt-4 leading-7 text-slate-600">Read about UniRely's achievements in top publications.</p>
+						</div>
+						<span className="text-sm font-medium text-slate-500">Recognized by leading voices</span>
+					</div>
+					<div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+						{featured.map((publication) => (
+							<div
+								key={publication.name}
+								className="group overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#a5d765] hover:shadow-xl hover:shadow-slate-200/70"
+							>
+								<div className="flex items-center justify-between">
+									<span className="text-sm font-semibold tracking-wide text-slate-700">{publication.name}</span>
+									<span aria-hidden="true" className="text-lg text-[#83b746] transition-transform group-hover:translate-x-1">→</span>
+								</div>
+								<div className="mt-5 flex h-56 items-center justify-center rounded-2xl bg-slate-50 p-5 transition group-hover:bg-[#f7fbed]">
+									<img src={publication.image} alt={`${publication.name} logo`} loading="lazy" className="max-h-full max-w-full object-contain" />
+								</div>
+							</div>
 						))}
 					</div>
 				</div>
